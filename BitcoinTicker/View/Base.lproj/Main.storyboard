@@ -8,65 +8,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Bitcoin price-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BitcoinTicker" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H4g-qN-MbT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <subviews>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZGz-pe-AwG">
-                                        <rect key="frame" x="0.0" y="638" width="414" height="216"/>
-                                    </pickerView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jg7-Dt-rnc">
-                                        <rect key="frame" x="8" y="351" width="398" height="110"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="110" id="HCN-1u-ljF"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="isA-AQ-nhq"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="54"/>
-                                        <color key="textColor" systemColor="systemOrangeColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.070588235294117646" green="0.52941176470588236" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="ZGz-pe-AwG" secondAttribute="bottom" constant="42" id="FXe-lq-rox"/>
-                                    <constraint firstAttribute="trailing" secondItem="ZGz-pe-AwG" secondAttribute="trailing" id="I2N-dK-ZPh"/>
-                                    <constraint firstItem="ZGz-pe-AwG" firstAttribute="top" secondItem="Jg7-Dt-rnc" secondAttribute="bottom" constant="177" id="Kqv-xp-S9c"/>
-                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="top" secondItem="H4g-qN-MbT" secondAttribute="top" constant="351" id="Q9h-9W-F49"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jg7-Dt-rnc" secondAttribute="trailing" constant="8" id="Svd-wC-62Y"/>
-                                    <constraint firstItem="Jg7-Dt-rnc" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" constant="8" id="iYv-K1-9ow"/>
-                                    <constraint firstItem="ZGz-pe-AwG" firstAttribute="leading" secondItem="H4g-qN-MbT" secondAttribute="leading" id="njv-cB-z0c"/>
-                                </constraints>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="H4g-qN-MbT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1oZ-ds-KOr"/>
-                            <constraint firstAttribute="bottom" secondItem="H4g-qN-MbT" secondAttribute="bottom" id="ZTr-VC-cpm"/>
-                            <constraint firstItem="H4g-qN-MbT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jBu-E0-VFA"/>
-                            <constraint firstAttribute="trailing" secondItem="H4g-qN-MbT" secondAttribute="trailing" id="uOB-A5-h47"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Bitcoin price" id="fpL-oy-JVf"/>
-                    <connections>
-                        <outlet property="bitcoinPriceLabel" destination="Jg7-Dt-rnc" id="LGh-mP-7xe"/>
-                        <outlet property="currencyPicker" destination="ZGz-pe-AwG" id="MaK-nO-flZ"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="362" y="192"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="eRN-AL-WMO">
             <objects>
@@ -80,12 +21,56 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JTS-yw-LrQ"/>
+                        <segue destination="4f2-ls-taZ" kind="relationship" relationship="rootViewController" id="nWA-Wh-dez"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HaU-AM-K6s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-141" y="192"/>
+        </scene>
+        <!--Bitcoin price-->
+        <scene sceneID="Oxl-73-Ckz">
+            <objects>
+                <viewController id="4f2-ls-taZ" customClass="ViewController" customModule="BitcoinTicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RfX-ie-2Im"/>
+                        <viewControllerLayoutGuide type="bottom" id="XPQ-22-1Vh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e0x-rd-m2S">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🚧" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="38g-XJ-Tyk">
+                                <rect key="frame" x="184.5" y="370" width="45" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R4F-f2-UTO">
+                                <rect key="frame" x="49" y="623" width="316" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="38g-XJ-Tyk" secondAttribute="trailing" id="1ec-Vt-AnY"/>
+                            <constraint firstItem="38g-XJ-Tyk" firstAttribute="top" secondItem="RfX-ie-2Im" secondAttribute="bottom" constant="228" id="23o-9l-mLE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R4F-f2-UTO" secondAttribute="trailing" constant="29" id="BjL-OE-eQB"/>
+                            <constraint firstItem="38g-XJ-Tyk" firstAttribute="centerX" secondItem="e0x-rd-m2S" secondAttribute="centerX" id="N9a-vo-UcS"/>
+                            <constraint firstItem="R4F-f2-UTO" firstAttribute="leading" secondItem="e0x-rd-m2S" secondAttribute="leadingMargin" constant="29" id="QQK-um-asY"/>
+                            <constraint firstItem="38g-XJ-Tyk" firstAttribute="centerX" secondItem="R4F-f2-UTO" secondAttribute="centerX" id="Uvj-g7-ebk"/>
+                            <constraint firstItem="38g-XJ-Tyk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="e0x-rd-m2S" secondAttribute="leadingMargin" id="h61-NI-MUT"/>
+                            <constraint firstItem="XPQ-22-1Vh" firstAttribute="top" secondItem="R4F-f2-UTO" secondAttribute="bottom" constant="23" id="zUv-jg-v1g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bitcoin price" id="f44-0u-SLL"/>
+                    <connections>
+                        <outlet property="bitcoinPriceLabel" destination="38g-XJ-Tyk" id="5ta-mV-Ke5"/>
+                        <outlet property="currencyPicker" destination="R4F-f2-UTO" id="kLV-eL-A33"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0KK-ya-yOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="363.768115942029" y="191.51785714285714"/>
         </scene>
     </scenes>
     <resources>
