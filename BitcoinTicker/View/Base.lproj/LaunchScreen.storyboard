@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -14,35 +16,40 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ut3-lb-CLh"/>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LABLOGONewRound2" translatesAutoresizingMaskIntoConstraints="NO" id="cRf-A8-kXI">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ut3-lb-CLh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bitcoin" translatesAutoresizingMaskIntoConstraints="NO" id="cRf-A8-kXI">
+                                <rect key="frame" x="102" y="339" width="210" height="219"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="6Bj-Z0-djT"/>
-                                    <constraint firstAttribute="height" constant="300" id="LUW-S9-dh2"/>
+                                    <constraint firstAttribute="width" constant="210" id="Zzn-6s-aXU"/>
+                                    <constraint firstAttribute="height" constant="219" id="oDd-x7-i2p"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ut3-lb-CLh" secondAttribute="bottom" id="EaZ-t1-8qS"/>
-                            <constraint firstItem="ut3-lb-CLh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="LEJ-T6-PRl"/>
-                            <constraint firstAttribute="trailing" secondItem="ut3-lb-CLh" secondAttribute="trailing" id="ZbK-KE-6nS"/>
-                            <constraint firstItem="ut3-lb-CLh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="lhc-nx-PXZ"/>
-                            <constraint firstItem="cRf-A8-kXI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="wvw-lj-YWp"/>
-                            <constraint firstItem="cRf-A8-kXI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xej-4h-COX"/>
+                            <constraint firstItem="ut3-lb-CLh" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="0pd-CY-Sni"/>
+                            <constraint firstAttribute="bottom" secondItem="ut3-lb-CLh" secondAttribute="bottom" id="4in-cI-n99"/>
+                            <constraint firstItem="cRf-A8-kXI" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="82" id="6Ki-bU-tIf"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="cRf-A8-kXI" secondAttribute="bottom" constant="304" id="Asf-A8-eeA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cRf-A8-kXI" secondAttribute="trailing" constant="82" id="SEm-Yn-aLu"/>
+                            <constraint firstAttribute="trailing" secondItem="ut3-lb-CLh" secondAttribute="trailing" id="rJJ-x0-jic"/>
+                            <constraint firstItem="cRf-A8-kXI" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="295" id="slt-cW-5x5"/>
+                            <constraint firstItem="ut3-lb-CLh" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="vYF-z4-Qth"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="50.399999999999999" y="372.86356821589209"/>
+            <point key="canvasLocation" x="49.275362318840585" y="372.32142857142856"/>
         </scene>
     </scenes>
     <resources>
-        <image name="LABLOGONewRound2" width="250" height="250"/>
         <image name="background" width="596" height="842"/>
+        <image name="bitcoin" width="335" height="335"/>
     </resources>
 </document>
