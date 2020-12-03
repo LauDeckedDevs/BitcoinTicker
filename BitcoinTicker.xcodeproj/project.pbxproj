@@ -60,8 +60,8 @@
 		540D8789256C381F00AF9F3A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				63A618281C53C381007AF001 /* AppDelegate.swift */,
 				63A6182A1C53C381007AF001 /* ViewController.swift */,
+				63A618281C53C381007AF001 /* AppDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -101,7 +101,6 @@
 				F1E1E87F8C4403902FF5EB07 /* Pods-BitcoinTicker.debug.xcconfig */,
 				9F6BB85D203467557CE8F7B1 /* Pods-BitcoinTicker.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
