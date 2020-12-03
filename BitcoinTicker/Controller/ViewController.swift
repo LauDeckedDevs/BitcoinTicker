@@ -45,45 +45,39 @@ class ViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDeleg
     //MARK: -UIPickerSelectedRow
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print(currencyArray[row])
+        finalURL = baseURL + currencyArray[row]
     }
     
     //MARK: - Networking
     
     func getPriceData(url: String) {
-        Alamofire.request(url, method: .get).responseJSON {
+        AF.request(url, method: .get).responseJSON {
             response in
-            if response.result.isSuccess {
-                let priceJSON: JSON = JSON(response.result.value!)
-                self.updatePriceData(json: bitcoinJSON)
-            } else {
+            if ((response.data?.isEmpty) != nil) {
                 self.bitcoinPriceLabel.text = "N/A"
+            } else {
+                let priceJSON: JSON = JSON(response.result)
+                self.updatePriceData(json: priceJSON)
             }
         }
     }
-//    
-//    
-//    
-//    
-//    //MARK: - JSON Parsing
-//    /***************************************************************/
-//    
-//    func updateWeatherData(json : JSON) {
-//        
-//        if let tempResult = json["main"]["temp"].double {
-//        
-//        weatherData.temperature = Int(round(tempResult!) - 273.15)
-//        weatherData.city = json["name"].stringValue
-//        weatherData.condition = json["weather"][0]["id"].intValue
-//        weatherData.weatherIconName =    weatherData.updateWeatherIcon(condition: weatherData.condition)
-//        }
-//        
-//        updateUIWithWeatherData()
-//    }
-//    
 
+    //MARK: - JSON Parsing
+    
+    func updatePriceData(json : JSON) {
+        if let priceResult = json["main"]["temp"].double {
+//            weatherData.temperature = Int(round(priceResult!) - 273.15)
+//            weatherData.city = json["name"].stringValue
+//            weatherData.condition = json["weather"][0]["id"].intValue
+//            weatherData.weatherIconName =    weatherData.updateWeatherIcon(condition: weatherData.condition)
+        }
+        updateUIWithPriceData()
+    }
+    
+    //MARK: - UIUpdate
 
-
-
+    func updateUIWithPriceData() {
+        
+    }
 }
 
